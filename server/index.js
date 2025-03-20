@@ -3,11 +3,9 @@ import express from "express";
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
+// Serve static files from the 'public' folder
+app.use(express.static('public'));
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}!`);
+    console.log(`Example app listening on port ${port}`);
 });
- 
